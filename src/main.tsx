@@ -7,11 +7,9 @@ import "@mantine/core/styles.css";
 import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <MantineProvider forceColorScheme="dark">
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </MantineProvider>
-  </StrictMode>
+  <MantineProvider forceColorScheme="dark">
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </MantineProvider>
 );

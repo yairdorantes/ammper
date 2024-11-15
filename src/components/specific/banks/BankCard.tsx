@@ -1,5 +1,6 @@
 import { Avatar, Badge, Button, Card, Group, Image, Text } from "@mantine/core";
 import { FaGlobe } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 interface BankData {
   id: number;
@@ -63,9 +64,11 @@ const BankCard = ({ bank }: Props) => {
         with tours and activities on and around the fjords of Norway
       </Text> */}
 
-      <Button color="blue" fullWidth mt="md" radius="md">
-        Seleccionar
-      </Button>
+      <Link to={`/banks/${bank.name}/accounts`}>
+        <Button color="blue" fullWidth mt="md" radius="md">
+          Seleccionar
+        </Button>
+      </Link>
     </Card>
   );
 };

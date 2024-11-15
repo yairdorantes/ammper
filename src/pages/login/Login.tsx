@@ -2,17 +2,19 @@ import { Button, Input, Loader, PasswordInput, TextInput } from "@mantine/core";
 import video from "../../media/videos/sample.mp4";
 import { FaUser } from "react-icons/fa";
 import { MdPassword } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "@mantine/form";
 import useStore from "../../store/authStore";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useState } from "react";
+import { toast } from "react-toastify";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const Login = () => {
   const { user, setUser } = useStore();
   const [loader, setLoader] = useState(false);
+  const navigate = useNavigate();
 
   const form = useForm({
     initialValues: {
@@ -29,9 +31,11 @@ const Login = () => {
       })
       .then((result) => {
         setUser(result.data);
+        navigate("/banks");
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Username or password incorrect");
       })
       .finally(() => setLoader(false));
   };

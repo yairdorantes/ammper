@@ -2,7 +2,7 @@ import { Button, Input, Loader, PasswordInput, TextInput } from "@mantine/core";
 import video from "../../media/videos/sample.mp4";
 import { FaUser } from "react-icons/fa";
 import { MdPassword } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "@mantine/form";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -13,6 +13,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 const Signup = () => {
   const [loader, setLoader] = useState(false);
   const { user, setUser } = useStore();
+  const navigate = useNavigate();
 
   const form = useForm({
     // mode: "uncontrolled",
@@ -31,7 +32,7 @@ const Signup = () => {
         password: data.password,
       })
       .then((signupResult) => {
-        console.log(signupResult);
+        // console.log(signupResult);
         toast.success("User created successfully");
 
         // After signup, attempt to log in
@@ -42,6 +43,7 @@ const Signup = () => {
       })
       .then((loginResult) => {
         setUser(loginResult.data);
+        navigate("/banks");
       })
       .catch((err) => {
         console.log(err);
