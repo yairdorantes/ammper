@@ -19,7 +19,7 @@ const Banks = () => {
         headers: { Authorization: authHeader },
       })
       .then((res) => {
-        console.log(res.data); // Logs the fetched banks data
+        // console.log(res.data); // Logs the fetched banks data
         setBanksData(res.data);
       })
       .catch((err) => {
@@ -48,7 +48,7 @@ const Banks = () => {
       <div className="fixed z-20 top-16 backdrop-blur-md bg-opacity-25 p-4 bg-black w-fit rounded-md">
         <Breadcrumbs>{items}</Breadcrumbs>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-6 sm:p-24 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-20 gap-x-10 gap-y-6 sm:p-24 p-6">
         {loader && (
           <div className="absolute flex items-center justify-start flex-col font-bold sm:text-2xl text-sm top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
             Fetching Banks this could take a long time, please wait...

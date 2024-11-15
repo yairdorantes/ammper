@@ -36,6 +36,7 @@ const BankCard = ({ bank }: Props) => {
     <Card className="w-full" shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
         <Image
+          className="bg-gray-500"
           src={
             bank.logo
               ? bank.logo

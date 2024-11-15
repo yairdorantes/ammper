@@ -57,12 +57,13 @@ const BankAccounts = () => {
         }
       )
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setBankAccounts(res.data);
       })
       .catch((err) => {
         console.log(err);
         toast.error("Failed to fetch bank accounts. Try with another Bank");
+        navigate(-1);
       })
       .finally(() => setLoader(false));
   };
@@ -85,18 +86,18 @@ const BankAccounts = () => {
       <div className="fixed top-16 backdrop-blur-md bg-opacity-25 p-4 bg-black w-fit rounded-md">
         <Breadcrumbs>{items}</Breadcrumbs>
       </div>
-      {/* <div className="text-center mt-5 font-extrabold text-3xl">
+      <div className="text-center mt-28 font-extrabold text-3xl">
         <Badge variant="light" size="xl">
-          {bankName} Accounts
+          Accounts
         </Badge>
-      </div> */}
+      </div>
       {loader && (
         <div className="absolute flex items-center justify-start flex-col font-bold sm:text-2xl text-sm top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
           Fetching Accounts this could take a long time, please wait...
           <Loader size={"lg"} color="red" />
         </div>
       )}
-      <div className="grid w-fit  p-4 mx-auto mt-20 gap-x-6 sm:grid-cols-3 grid-cols-1  gap-y-4 justify-center items-center">
+      <div className="grid w-fit  p-4 mx-auto  gap-x-6 sm:grid-cols-3 grid-cols-1  gap-y-4 justify-center items-center">
         {bankAccounts &&
           bankAccounts.map((account, index) => (
             <BankAccount key={index} link={bankLink} account={account} />
