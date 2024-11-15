@@ -21,7 +21,6 @@
     "react-router-dom": "^6.28.0",
     "react-toastify": "^10.0.6",
     "vite-plugin-pwa": "^0.21.0",
-    "workbox-window": "^7.3.0",
     "zustand": "^5.0.1"
   },
   "devDependencies": {
