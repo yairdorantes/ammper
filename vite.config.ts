@@ -25,8 +25,8 @@ export default defineConfig({
       includeAssets: ["**/*"],
       registerType: "autoUpdate",
       manifest: {
-        short_name: "Eurocotton Fulfillment",
-        name: "Eurocotton Fulfillment",
+        short_name: "Ammper",
+        name: "Ammper",
         icons: [
           {
             src: "fav.png",
@@ -36,20 +36,20 @@ export default defineConfig({
           {
             src: "m.png",
             sizes: "1920x1080",
-            form_factor: "wide",
+            // form_factor: "wide",
             type: "image/png",
           },
           {
             src: "m.png",
             sizes: "1080x1920",
-            form_factor: "narrow",
+            // form_factor: "narrow",
             type: "image/png",
           },
           {
             src: "m.png",
             sizes: "32X32",
             type: "image/png",
-            form_factor: "narrow",
+            // form_factor: "narrow",
           },
           {
             src: "m.png",
@@ -71,8 +71,8 @@ export default defineConfig({
         // start_url: ".",
         start_url: "/",
         display: "standalone",
-        theme_color: "#0041a1",
-        background_color: "#0041a1",
+        theme_color: "#ED4046",
+        background_color: "#ED4046",
       },
     }),
   ],

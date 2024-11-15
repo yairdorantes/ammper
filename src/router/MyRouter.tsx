@@ -5,6 +5,7 @@ import Banks from "../pages/banks/Banks";
 import BankAccounts from "../pages/banks/BankAccounts";
 import Transactions from "../pages/transactions/Transactions";
 import AuthRoutes from "./AuthRoutes";
+import Page404 from "../pages/404/Page404";
 
 const MyRouter = () => {
   return (
@@ -19,6 +20,7 @@ const MyRouter = () => {
           element={<Transactions />}
         />
       </Route>
+      <Route path="/*" element={<Page404 />} />
     </Routes>
   );
 };
