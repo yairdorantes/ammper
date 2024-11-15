@@ -123,11 +123,13 @@ const Transactions = () => {
             <Transaction transaction={transaction} key={i} />
           ))}
       </div>
-      <div className="flex justify-center mb-5">
-        <Button disabled={loaderMore} onClick={getMoreTransactions}>
-          {loaderMore ? <Loader size="sm" color="red" /> : "Load more"}
-        </Button>
-      </div>
+      {transactions.results && transactions.results.length > 0 && (
+        <div className="flex justify-center mb-5">
+          <Button disabled={loaderMore} onClick={getMoreTransactions}>
+            {loaderMore ? <Loader size="sm" color="red" /> : "Load more"}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
