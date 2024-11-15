@@ -836,28 +836,28 @@ const banks = [
   },
 ];
 const App = () => {
-  const createLink = () => {
-    banks.map((bank, i) => {
-      axios
-        .post(
-          `${BelvoApiUrl}/api/links/`,
-          {
-            institution: bank.name,
-            username: "yair",
-          },
-          {
-            headers: { Authorization: authHeader },
-          }
-        )
-        .then((res) => {
-          toast.success("Link created successfully.");
-        })
-        .catch((err) => {
-          console.log(err);
-          toast.error("Failed to create link.");
-        });
-    });
-  };
+  // const createLink = () => {
+  //   banks.map((bank, i) => {
+  //     axios
+  //       .post(
+  //         `${BelvoApiUrl}/api/links/`,
+  //         {
+  //           institution: bank.name,
+  //           username: "yair",
+  //         },
+  //         {
+  //           headers: { Authorization: authHeader },
+  //         }
+  //       )
+  //       .then((res) => {
+  //         toast.success("Link created successfully.");
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         toast.error("Failed to create link.");
+  //       });
+  //   });
+  // };
   // createLink();
   return (
     <div className="">
