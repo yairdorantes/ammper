@@ -8,14 +8,18 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      workbox: {
+        maximumFileSizeToCacheInBytes: 15 * 1024 * 1024, // 15 MB
+        globPatterns: ["**/*"],
+      },
       devOptions: {
         enabled: true,
         // type: "module",
       },
       // add this to cache all the imports
-      workbox: {
-        globPatterns: ["**/*"],
-      },
+      // workbox: {
+      //   globPatterns: ["**/*"],
+      // },
       // add this to cache all the
       // static assets in the public folder
       includeAssets: ["**/*"],
