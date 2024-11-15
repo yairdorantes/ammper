@@ -62,7 +62,7 @@ const BankAccounts = () => {
       })
       .catch((err) => {
         console.log(err);
-        toast.error("Failed to fetch bank accounts.");
+        toast.error("Failed to fetch bank accounts. Try with another Bank");
       })
       .finally(() => setLoader(false));
   };

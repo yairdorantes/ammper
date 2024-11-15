@@ -33,6 +33,30 @@ export default defineConfig({
             sizes: "192x192",
             type: "image/png",
           },
+          {
+            src: "m.png",
+            sizes: "1920x1080",
+            form_factor: "wide",
+            type: "image/png",
+          },
+          {
+            src: "m.png",
+            sizes: "1080x1920",
+            form_factor: "narrow",
+            type: "image/png",
+          },
+          {
+            src: "m.png",
+            sizes: "32X32",
+            type: "image/png",
+            form_factor: "narrow",
+          },
+          {
+            src: "m.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+
           // {
           //   src: "/oms2.png",
           //   type: "image/png",

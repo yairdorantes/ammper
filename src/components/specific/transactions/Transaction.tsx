@@ -66,7 +66,7 @@ const Transaction = ({ transaction }: Props) => {
               <span className="text-sm font-medium text-muted-foreground">
                 Category
               </span>
-              <span className="font-semibold">
+              <span className="font-semibold truncate">
                 {transaction.category ? transaction.category : "-"}
               </span>
             </div>
@@ -79,7 +79,7 @@ const Transaction = ({ transaction }: Props) => {
               </span>
             </div>
           </div>
-          <div className="flex items-center space-x-4 rounded-md border p-4">
+          <div className="flex items-center space-x-4 rounded-md border  p-4">
             <Avatar src={transaction.merchant.logo}>
               <FaStore />
             </Avatar>
@@ -132,7 +132,7 @@ const Transaction = ({ transaction }: Props) => {
                 <CiTextAlignLeft />
                 <span className="text-sm font-medium">Description</span>
               </div>
-              <span className="text-sm truncate">
+              <span className="text-sm truncate max-w-56 ">
                 {transaction.description}
               </span>
             </div>
