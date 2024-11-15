@@ -69,7 +69,7 @@ export default defineConfig({
           // },
         ],
         // start_url: ".",
-        start_url: "/",
+        start_url: "/banks",
         display: "standalone",
         theme_color: "#ED4046",
         background_color: "#ED4046",

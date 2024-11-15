@@ -91,8 +91,8 @@ const BankAccounts = () => {
         </Badge>
       </div> */}
       {loader && (
-        <div className="absolute font-bold text-2xl top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
-          Fetching Accounts, please wait...
+        <div className="absolute flex items-center justify-start flex-col font-bold sm:text-2xl text-sm top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
+          Fetching Accounts this could take a long time, please wait...
           <Loader size={"lg"} color="red" />
         </div>
       )}

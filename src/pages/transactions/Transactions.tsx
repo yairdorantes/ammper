@@ -78,11 +78,12 @@ const Transactions = () => {
         </div>
       )}
       {loader && (
-        <div className="absolute font-bold text-2xl top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
-          Fetching Transactions, please wait...
+        <div className="absolute flex items-center justify-start flex-col font-bold sm:text-2xl text-sm top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
+          Fetching Transactions this could take a long time, please wait...
           <Loader size={"lg"} color="red" />
         </div>
       )}
+
       <div className="p-4 grid sm:grid-cols-2 grid-cols-1 w-fit gap-5 mt-24 mx-auto ">
         {transactions.results &&
           transactions.results.map((transaction, i) => (

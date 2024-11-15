@@ -50,8 +50,8 @@ const Banks = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-6 sm:p-24 p-6">
         {loader && (
-          <div className="absolute font-bold text-2xl top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
-            Fetching Banks, please wait...
+          <div className="absolute flex items-center justify-start flex-col font-bold sm:text-2xl text-sm top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2">
+            Fetching Banks this could take a long time, please wait...
             <Loader size={"lg"} color="red" />
           </div>
         )}
