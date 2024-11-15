@@ -39,6 +39,9 @@ CSRF_TRUSTED_ORIGINS = [
 
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://ammper-production.up.railway.app",
+]
 # Application definition
 
 
