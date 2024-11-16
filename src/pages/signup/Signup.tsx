@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import useStore from "../../store/authStore";
 const apiUrl = import.meta.env.VITE_API_URL;
+import bg from "../../media/images/bg.png";
 
 const Signup = () => {
   const [loader, setLoader] = useState(false);
@@ -65,15 +66,11 @@ const Signup = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
+      <img
+        src={bg}
         className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      />
+
       <div className="relative flex justify-center items-center mt-52 z-10 text-white  p-8">
         <form
           onSubmit={form.onSubmit((values) => handleSubmit(values))}

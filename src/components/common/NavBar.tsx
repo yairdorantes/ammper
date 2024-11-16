@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div className="fixed flex z-20 items-center justify-between bg-purple-900 w-full p-4 top-0">
       <div className="text-white">
-        Welcome, <span className="font-bold">{user.username}</span>{" "}
+        Welcome, <span className="font-bold truncate">{user.username}</span>{" "}
       </div>
       <Menu>
         <Menu.Target>
