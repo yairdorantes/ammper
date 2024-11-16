@@ -26,21 +26,23 @@ SECRET_KEY = 'django-insecure-8b57sa2irqqc8o741_&q%b#*agb^1e&!1_83wqnz%smg3u#wpd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ORIGIN_ALLOW_ALL = True
 
 
 ALLOWED_HOSTS = ["*"]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:8000",
-   "https://ammper-production.up.railway.app"
+   "https://ammper-production.up.railway.app",
     "http://localhost:5173",
+    "https://front--hilarious-sundae-e34b41.netlify.app"
 
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "https://ammper-production.up.railway.app",
+    "https://front--hilarious-sundae-e34b41.netlify.app"
 ]
 # Application definition
 
@@ -75,7 +77,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-        'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
